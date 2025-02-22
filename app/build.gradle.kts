@@ -2,6 +2,7 @@
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+     id("kotlin-parcelize")
 }
 
 android {
@@ -40,6 +41,11 @@ android {
 }
 
 dependencies {
+
+    val nav_version = "2.8.7"
+
+    // Jetpack Compose integration
+    implementation("androidx.navigation:navigation-compose:$nav_version")
 
     //compose viewmodel
     val lifecycle_version = "2.8.7"
